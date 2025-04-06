@@ -27,29 +27,37 @@ This project implements a simple **Football World Cup Score Board** that keeps t
 ### 1. **Start a game 🏆**
 To start a new game, create a Match object with the home and away teams, and use the ScoreBoard to start the game:
 
-`ScoreBoard scoreBoard = new ScoreBoard();
+```java
+ScoreBoard scoreBoard = new ScoreBoard();
 Match match1 = new Match("Mexico", "Canada");
-scoreBoard.startGame(match1);`
+scoreBoard.startGame(match1);
+```
 
 This creates a match between Mexico and Canada with an initial score of 0-0. 🎮
 
 ### 2. **Update the score ⚽**
 Once a game has started, you can update the score:
 
+```java 
 scoreBoard.updateScore(match1, 3, 1); // Mexico 3 - Canada 1
+```
 
 ### 3. **Finish the game 🏁**
 To finish a match and remove it from the scoreboard, use the finishGame method:
 
+```java
 scoreBoard.finishGame(match1);
+```
 
 ### 4. **Get a summary 📈**
 To get a sorted summary of all games based on their total score, use the getSummary method:
 
+```java
 List<Match> summary = scoreBoard.getSummary();
 for (Match match : summary) {
 System.out.println(match);
 }
+```
 
 ## 🧪  To run the tests: 🧪 
 - After building the project, run the following command to execute the tests: `mvn test`
